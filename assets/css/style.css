@@ -2,8 +2,8 @@
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid black; */
     box-sizing: border-box;
+    /* border: 1px solid black; */
 }
 
 body {
@@ -13,9 +13,8 @@ body {
 header {
     overflow: hidden;
     margin: auto;
-    width: 90%;
     padding: 15px 60px;
-    /* border: 1px solid pink; */
+    box-shadow: 0px 2px 2px 0 rgba(82, 173, 131, 0.2);
 }
 
 header .logo {
@@ -27,12 +26,11 @@ header .logo {
 
 .green {
     color: #48F97D;
-    font-weight: bolder;
 }
 
 header .menu {
     float: right;
-    margin: 15px;
+    margin: 20px 0;
 }
 
 nav ul li {
@@ -41,43 +39,48 @@ nav ul li {
 }
 
 nav ul li a {
-    width: 20%;
     margin: 0 25px;
     font-weight: bold;
     text-decoration: none;
     color: #48F97D;
 }
 
+.nav-one:hover~hr {
+    margin-left: 0%;
+    display: block;
+}
+
 .nav-two:hover~hr {
     margin-left: 35%;
+    display: block;
 }
 
 .nav-three:hover~hr {
-    margin-left: 67%;
+    margin-left: 65%;
+    display: block;
 }
 
-hr {
-    height: .25rem;
+ul hr {
     width: 35%;
-    margin: 5px 0;
+    margin: 5px;
+    height: 5px;
     background: grey;
-    border: none;
-    transition: .3s ease;
+    transition: .3s;
 }
 
 .welcome-content {
     display: flex;
     width: 90%;
-    margin: 45px auto;
+    margin: 100px auto;
     align-items: center;
 }
 
 .intro {
-    flex: 1;
+    flex-grow: 1;
 }
 
 .intro p {
-    padding: 10px;
+    padding: 30px;
     text-align: justify;
     font-size: 1.3em;
     font-weight: 700;
@@ -86,7 +89,7 @@ hr {
 }
 
 .cover {
-    flex: 1;
+    flex-grow: 1;
     text-align: center;
 }
 
@@ -103,22 +106,24 @@ hr {
     display: flex;
     border-radius: 15px;
     padding: 15px;
-    margin-top: 30px;
+    margin: 10px 0;
     align-items: center;
-}
-
-.desc-image {
-    flex: 1;
+    box-shadow: 0px 5px 1px 0 rgba(82, 173, 131, 0.2);
 }
 
 .desc {
-    flex: 1;
-    margin: 20px;
+    flex-grow: 2;
+    margin: 20px 40px;
     line-height: 1.5em;
 }
 
+.desc-img {
+    flex-grow: 1;
+    text-align: center;
+}
+
 .desc-img img {
-    width: 350px;
+    width: 300px;
 }
 
 h2 {
@@ -130,9 +135,95 @@ h2 {
     color: grey;
 }
 
-.card {
-    box-shadow: 0px 5px 10px 0 rgba(82, 173, 131, 0.2);
-    margin-top: 15px;
+.secondary-content {
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.secondary-content #partner {
+    float: left;
+    width: 40%;
+    align-items: center;
+}
+
+.container-column {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container-row {
+    display: flex;
+}
+
+.container-row img {
+    flex-basis: 33%;
+    width: 125px;
+    margin: 10px 10px;
+    padding: 20px;
+}
+
+.secondary-content #tentang {
+    float: right;
+    width: 60%;
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    height: 150px;
+    padding: 30px;
+    box-shadow: 0px -2px 2px 0 rgba(82, 173, 131, 0.2);
+    align-items: center;
+}
+
+.anchors {
+    flex-grow: 1;
+    flex-basis: 20%;
+    font-size: 17px;
+    text-align: center;
+}
+
+.anchors ul li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.anchors ul li a {
+    color: grey;
+    text-decoration: none;
+}
+
+.anchors ul li a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+.bottom-logo {
+    flex-grow: 1;
+    flex-basis: 20%;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.3em;    
+}
+
+.social-media {
+    flex-grow: 1;
+    flex-basis: 20%;
+    padding: 20px;
+    text-align: center;
+    font-size: 10px; 
+}
+
+.social-media img {
+    width: 40px;
+    margin: 0 20px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -150,6 +241,15 @@ h2 {
     }
     nav ul li a:hover {
         color: black;
+    }
+    .nav-one:hover~hr {
+        display: none;
+    }
+    .nav-two:hover~hr {
+        display: none;
+    }
+    .nav-three:hover~hr {
+        display: none;
     }
     hr {
         display: none;
@@ -180,5 +280,41 @@ h2 {
     .desc {
         text-align: center;
         font-size: 0.9em;
+    }
+    .secondary-content #partner {
+        float: none;
+        width: 100%;
+    }
+    .container-row img {
+        width: 125px;
+        margin: 10px 10px;
+        padding: 40px;
+    }
+    .secondary-content #tentang {
+        float: none;
+        width: 100%;
+    }    
+    .anchors {
+        padding: 10px;
+        line-height: 1.3em;
+    }
+    .anchors ul {
+        margin-top: 10px;
+    }
+    .anchors ul li {
+        text-align: center;
+        font-size: 15px;
+        margin: 0px 5px;
+    }
+    .bottom-logo {
+        font-size: 15px;
+        padding: 20px;
+    }
+    .social-media {
+        padding: 10px;
+    }
+    .social-media img {
+        width: 30px;
+        margin: 10px 5px;
     }
 }
