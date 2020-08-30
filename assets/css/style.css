@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+}
+
+header {
+    overflow: hidden;
+    margin: auto;
+    width: 90%;
+    padding: 15px 60px;
+    /* border: 1px solid pink; */
+}
+
+header .logo {
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+}
+
+.green {
+    color: #48F97D;
+    font-weight: bolder;
+}
+
+header .menu {
+    float: right;
+    margin: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+nav ul li a {
+    width: 20%;
+    margin: 0 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #48F97D;
+}
+
+.nav-two:hover~hr {
+    margin-left: 35%;
+}
+
+.nav-three:hover~hr {
+    margin-left: 67%;
+}
+
+hr {
+    height: .25rem;
+    width: 35%;
+    margin: 5px 0;
+    background: grey;
+    border: none;
+    transition: .3s ease;
+}
+
+.welcome-content {
+    display: flex;
+    width: 90%;
+    margin: 45px auto;
+    align-items: center;
+}
+
+.intro {
+    flex: 1;
+}
+
+.intro p {
+    padding: 10px;
+    text-align: justify;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: grey;
+}
+
+.cover {
+    flex: 1;
+    text-align: center;
+}
+
+.cover img {
+    width: 75%;
+}
+
+.main-content {
+    width: 90%;
+    margin: auto;
+}
+
+.card {
+    display: flex;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.desc-image {
+    flex: 1;
+}
+
+.desc {
+    flex: 1;
+    margin: 20px;
+    line-height: 1.5em;
+}
+
+.desc-img img {
+    width: 350px;
+}
+
+h2 {
+    color: #48F97D;
+    margin-bottom: 20px;
+}
+
+.grey {
+    color: grey;
+}
+
+.card {
+    box-shadow: 0px 5px 10px 0 rgba(82, 173, 131, 0.2);
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+    header .logo {
+        float: none;
+        text-align: center;
+    }
+    header .menu {
+        float: none;
+        text-align: center;
+        margin: 25px;
+    }
+    nav ul li a {
+        margin: 0 5px;
+    }
+    nav ul li a:hover {
+        color: black;
+    }
+    hr {
+        display: none;
+    }
+    .welcome-content {
+        flex-direction: column;
+        margin: 15px auto;
+    }
+    .intro {
+        margin-top: 10px;
+        text-align: center;
+    }
+    .intro p {
+        padding: 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .cover img {
+        margin-top: 25px;
+    }
+    .card {
+        box-shadow: 0px 4px 4px 0 rgba(82, 173, 131, 0.2);
+        margin-top: 0px;
+    }
+    .desc-img {
+        display: none;
+    }
+    .desc {
+        text-align: center;
+        font-size: 0.9em;
+    }
+}
