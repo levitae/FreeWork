@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid black; */
 }
 
 body {
-    font-family: 'Lora', serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+.green {
+    color: #48F97D;
 }
 
 header {
@@ -22,10 +25,6 @@ header .logo {
     font-size: 25px;
     font-weight: bold;
     letter-spacing: 0.3em;
-}
-
-.green {
-    color: #48F97D;
 }
 
 header .menu {
@@ -146,7 +145,7 @@ h2 {
 
 .secondary-content #partner {
     float: left;
-    width: 40%;
+    width: 50%;
     align-items: center;
 }
 
@@ -169,7 +168,7 @@ h2 {
 
 .secondary-content #tentang {
     float: right;
-    width: 60%;
+    width: 50%;
     padding: 20px;
 }
 
@@ -210,7 +209,7 @@ footer {
     text-align: center;
     font-size: 25px;
     font-weight: bold;
-    letter-spacing: 0.3em;    
+    letter-spacing: 0.3em;
 }
 
 .social-media {
@@ -218,12 +217,42 @@ footer {
     flex-basis: 20%;
     padding: 20px;
     text-align: center;
-    font-size: 10px; 
+    font-size: 10px;
+}
+.social-media a {
+    color: white;
 }
 
 .social-media img {
     width: 40px;
     margin: 0 20px;
+}
+
+.shadow {
+    box-shadow: 0px 15px 15px 0 rgba(82, 173, 131, 0.2);
+}
+
+.profile-img {
+    padding: 20px;
+}
+
+.profile-img img {
+    width: 125px;
+}
+
+.profile-desc {
+    font-size: 13px;
+    text-align: center;
+}
+
+.background-grey {
+    color: white;
+    background-color: grey;
+    padding: 3px;
+}
+
+h3 {
+    margin: 20px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -286,14 +315,14 @@ footer {
         width: 100%;
     }
     .container-row img {
-        width: 125px;
+        width: 50px;
         margin: 10px 10px;
-        padding: 40px;
+        padding: 10px;
     }
     .secondary-content #tentang {
         float: none;
         width: 100%;
-    }    
+    }
     .anchors {
         padding: 10px;
         line-height: 1.3em;
@@ -315,6 +344,6 @@ footer {
     }
     .social-media img {
         width: 30px;
-        margin: 10px 5px;
+        margin: 0;
     }
 }
